@@ -1,0 +1,30 @@
+<html>
+<head>
+
+<script language = "JavaScript">
+function move()
+{
+    var leftPos = document.all.bird.style.left;leftPos = parseInt(leftPos);if( leftPos > window.innerWidth)//innerWidth returns the width of the browser window.
+   {
+	leftPos = -200;
+   }
+   else
+   {
+	leftPos = leftPos + 30; 
+   }    
+document.all.bird.style.left=leftPos;var timer = setTimeout("move()", 100);leftPos = leftPos + 30; document.all.bird.style.left=leftPos;
+}
+</script>
+</head>
+<body>
+<center>
+<h1> Flying Bird</h1>
+<input type = "button" value="Start" onClick="move()"/>
+
+<div id="bird" style="position:absolute; left:50; top:75">
+	<img src="images/bird.gif" width="150"/>
+</div>
+
+</center>
+</body>
+</html>
